@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0aab1243c130748a389b2b2eb75503, type: 3}
+  m_Name: J_Faceless
+  m_EditorClassIdentifier: 
+  ID: J_Faceless
+  JokerName: 
+  Description: Face cards give x0.5 Multi but count as 0 Chips.
+  Icon: {fileID: 0}
+  Rarity: 0
+  Price: 0
+  TriggerType: 0
+  Priority: 0
+  EffectValue1: 0
+  EffectValue2: 0
+  IsConsumable: 0
