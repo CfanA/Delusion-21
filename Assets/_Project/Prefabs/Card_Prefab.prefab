@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8332281419932012070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -533,7 +533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 285, y: -100}
+  m_AnchoredPosition: {x: 225.5, y: -62.6}
   m_SizeDelta: {x: 140, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3279968981362035244
@@ -564,8 +564,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d254b7bf4d8bd474e825aefc4eb8253a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -591,7 +591,7 @@ MonoBehaviour:
   RankText: {fileID: 3410519990599819517}
   ValueText: {fileID: 9112433255906426890}
   DebuffOverlay: {fileID: 6474544651887602767}
-  SpadeSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  HeartSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  ClubSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  DiamondSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  SpadeSprite: {fileID: 21300000, guid: 971f9152347c5bc4a86c493226d93905, type: 3}
+  HeartSprite: {fileID: 21300000, guid: 3502f769eb585f84b80b49a2ff2c8a86, type: 3}
+  ClubSprite: {fileID: 21300000, guid: 236dff745e9a96948a119ad6d16fbe54, type: 3}
+  DiamondSprite: {fileID: 21300000, guid: 829ebcd234eded44fbad96511371bafc, type: 3}

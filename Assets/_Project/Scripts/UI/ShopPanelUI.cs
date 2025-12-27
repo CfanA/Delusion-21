@@ -2,38 +2,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Systems;
-using System.Collections.Generic;
 
 namespace UI
 {
     public class ShopPanelUI : MonoBehaviour
     {
         [Header("Layout")]
-        public Transform ItemsContainer; // 放置商品的父节点
-        public GameObject ItemPrefab;    // 商品预制体
-        public GameObject ShopRoot;      // 整个商店界面的根节点 (用于显示/隐藏)
+        public Transform ItemsContainer; 
+        public GameObject ItemPrefab;    
+        public GameObject ShopRoot;      
 
-        [Header("Controls")]
+        [Header("Header Info")]
         public TMP_Text MoneyText;
+        public TMP_Text RoundText; // 如果有
+
+        [Header("Footer Controls")]
         public TMP_Text RerollPriceText;
         public Button RerollButton;
         public Button NextRoundButton;
 
         private void Start()
         {
-            // 订阅事件
             if (ShopManager.Instance != null)
                 ShopManager.Instance.OnShopRefreshed += RefreshDisplay;
                 
-            // 绑定按钮
             RerollButton.onClick.AddListener(() => ShopManager.Instance.RerollShop());
             NextRoundButton.onClick.AddListener(() => ShopManager.Instance.LeaveShop());
 
-            // 初始状态：隐藏商店
-            ShopRoot.SetActive(false);
+            // 初始隐藏
+            // ShopRoot.SetActive(false); 
         }
 
-        // 被外部调用以显示商店
         public void Show()
         {
             ShopRoot.SetActive(true);
@@ -47,10 +46,10 @@ namespace UI
 
         private void RefreshDisplay()
         {
-            // 1. 清理旧商品
+            // 清理
             foreach (Transform child in ItemsContainer) Destroy(child.gameObject);
 
-            // 2. 生成新商品
+            // 生成商品
             var items = ShopManager.Instance.CurrentItems;
             for (int i = 0; i < items.Count; i++)
             {
@@ -58,12 +57,18 @@ namespace UI
                 go.GetComponent<ShopItemUI>().Initialize(items[i], i);
             }
 
-            // 3. 更新文本
+            // 更新文本
             if (GameRunManager.Instance != null)
             {
-                MoneyText.text = $"Money: ${GameRunManager.Instance.CurrentRun.Money}";
+                MoneyText.text = $"{GameRunManager.Instance.CurrentRun.Money}";
             }
-            RerollPriceText.text = $"Reroll (${ShopManager.Instance.RerollPrice})";
+            
+            int cost = ShopManager.Instance.RerollPrice;
+            RerollPriceText.text = $"${cost}";
+            
+            // 检查 Reroll 钱够不够
+            int currentMoney = GameRunManager.Instance.CurrentRun.Money;
+            RerollButton.interactable = currentMoney >= cost;
         }
     }
 }
