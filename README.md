@@ -4,7 +4,11 @@
 > 目标是通过 Joker 构筑、Boss 规则对抗与局外成长，形成“高风险算分 + 组合爆发”的回合体验。
 
 ---
+## 🖼️ Demo 演示
 
+![Delusion-21 Gameplay Demo](gifs/demo.gif)
+
+---
 ## 项目定位
 
 **Delusion-21** 是我用于验证“经典扑克牌玩法 × 现代 Roguelike 系统设计”可行性的独立原型。项目重点不在美术量产，而在：
