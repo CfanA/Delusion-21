@@ -6,7 +6,7 @@
 ---
 ## 🖼️ Demo 演示
 
-![Delusion-21 Gameplay Demo](gifs/demo.gif)
+![Delusion-21 Gameplay Demo](Docs/gifs/demo.gif)
 
 ---
 ## 项目定位
