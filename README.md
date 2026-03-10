@@ -1,14 +1,15 @@
 # Delusion-21
 
-> 一款融合 **Blackjack（21点）** 与 **Roguelike Deckbuilder（牌组构筑）** 的 Unity 原型项目。  
+> 一款参考**Balatro（小丑牌）**并融合 **Blackjack（21点）**的 Unity 原型项目。  
 > 目标是通过 Joker 构筑、Boss 规则对抗与局外成长，形成“高风险算分 + 组合爆发”的回合体验。
 
 ---
-## 🖼️ Demo 演示
+## Demo 演示
 
-![Delusion-21 Gameplay Demo](Docs/gifs/demo.gif)
+![Delusion-21 Gameplay Demo](Docs/gifs/Demo.gif)
 
 ---
+
 ## 项目定位
 
 **Delusion-21** 是我用于验证“经典扑克牌玩法 × 现代 Roguelike 系统设计”可行性的独立原型。项目重点不在美术量产，而在：
@@ -64,22 +65,11 @@ JokerManager + JokerLogicLibrary
 BossRuleLibrary
   └─ 集中管理 Boss 特殊规则与阈值修改
 ```
-
----
-
-## 技术栈
-
-- **Engine**: Unity 2022.3 LTS（URP）
-- **Language**: C#
-- **UI**: UGUI + TextMeshPro
-- **Tween**: DOTween
-- **Data**: ScriptableObject（BossData / JokerData）
-
 ---
 
 ## 如何运行
 
-1. 使用 **Unity 2022.3.62f2c1**（或相近 2022.3 LTS 版本）打开项目。  
+1. 使用 **Unity 2022.3.62f2c1**打开项目。  
 2. 打开场景：`Assets/_Project/Scenes/MainTable.unity`。  
 3. 运行后从 `GameRunManager` 启动新局，观察战斗、算分与商店流程。
 
@@ -97,7 +87,7 @@ BossRuleLibrary
 
 ---
 
-## 👤 作者说明
+## 说明
 
 该仓库当前为玩法原型阶段，后续计划补充：
 
